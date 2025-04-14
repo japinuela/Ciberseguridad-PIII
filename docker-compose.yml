@@ -1,0 +1,16 @@
+services:
+  slim:
+    build: .
+    working_dir: /var/www
+    ports:
+      - "8888:8080"
+    volumes:
+      - .:/var/www
+    environment:
+      DB_HOST: 172.17.0.3
+      DB_PORT: 3306
+      DB_NAME: ejemplo_db
+      DB_USER: alumno
+      DB_PASSWORD: alumno123
+      DB_CHARSET: utf8mb4
+      JWT_SECRET: clave_secreta_demo
