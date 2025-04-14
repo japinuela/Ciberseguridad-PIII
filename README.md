@@ -50,20 +50,6 @@ http://localhost:8888
 
 ---
 
-## Estructura del proyecto
-
-.
-├── public/             # Punto de entrada de Slim (index.php)
-├── src/                # Código fuente (clases, controladores, etc.)
-├── routes/             # Definición de rutas
-├── .env                # Variables de entorno (debe ser personalizado)
-├── Dockerfile          # Imagen de PHP con Slim
-├── docker-compose.yml  # Orquestación del entorno
-├── composer.json       # Dependencias PHP
-└── README.md
-
----
-
 ## Nota para estudiantes
 
 Este proyecto contiene una configuración mínima y funcional para prácticas locales.  
