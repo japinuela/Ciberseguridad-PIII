@@ -25,4 +25,5 @@ COPY . .
 EXPOSE 8080
 
 # Comando por defecto al iniciar el contenedor
-CMD ["php", "-S", "0.0.0.0:8080", "-t", "public"]
+CMD ["sh", "-c", "composer install && php -S 0.0.0.0:8080 -t public"]
+

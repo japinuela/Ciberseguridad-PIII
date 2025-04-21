@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: API Slim
+  version: 1.0.0
+  description: API generada a partir del archivo routes.php
+
+servers:
+  - url: http://172.17.0.4:8080
+
+paths:
+  /:
+    get:
+      summary: Página de inicio
+      responses:
+        '200':
+          description: Respuesta exitosa
+
+  /login:
+    post:
+      summary: Autenticación de usuario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Usuario autenticado correctamente
+        '401':
+          description: Autenticación fallida
+
+  /usuarios:
+    get:
+      summary: Obtener todos los usuarios
+      responses:
+        '200':
+          description: Lista de usuarios
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+
+    post:
+      summary: Crear un nuevo usuario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Usuario creado exitosamente
+
+  /usuarios/{id}:
+    get:
+      summary: Obtener usuario por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Datos del usuario
+        '404':
+          description: Usuario no encontrado
