@@ -16,7 +16,7 @@ API REST desarrollada con **Slim Framework 4** y **Docker**, pensada para práct
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/japinuela/ciberseguridad-slim-api.git
+git clone https://github.com/japinuela/ciberseguridad-PIII.git
 cd ciberseguridad-slim-api
 ```
 
