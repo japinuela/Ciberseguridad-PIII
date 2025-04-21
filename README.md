@@ -17,7 +17,7 @@ API REST desarrollada con **Slim Framework 4** y **Docker**, pensada para práct
 
 ```bash
 git clone https://github.com/japinuela/ciberseguridad-PIII.git
-cd ciberseguridad-slim-api
+cd ciberseguridad-PIII
 ```
 
 ### 2. Configurar las variables de entorno en docker-compose.yml o .env
@@ -42,7 +42,10 @@ docker-compose up --build
 
 > La primera vez puede tardar unos minutos mientras se construye la imagen y se instalan dependencias.
 
-### 4. Acceder a la API
+### 4. Compruebe que el contenedor de MySQL y el de este proyecto están en la misma red
+
+
+### 5. Acceder a la API
 
 Abra su navegador en:
 
